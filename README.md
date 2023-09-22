@@ -15,4 +15,15 @@ su elección ya sea de noticias, deportes, tecnología, etc. deberán tener Opci
 y Comentarios con sus respectivos contadores.
 
 
+## Installation
+
+composer install
+npm install
+npm run dev
+
+Laravel and Inertia Vue js
+
+
+
+
 
