@@ -51,6 +51,24 @@ public function create()
     return Inertia::render('TareaCrear');
 }
 /**
+ * @OA\Get(
+ *     path="/tareas/edit/{tarea}",
+ *     summary="Editar las tareas",
+ *     tags={"Tareas"},
+ *     @OA\Response(
+ *         response=200,
+ *         description="Vista de Editar Tareas",
+ *         @OA\JsonContent()
+ *     )
+ * )
+ */
+public function edit(Tarea $tarea)
+{
+    return Inertia::render('TareaEditar', ['tarea' => $tarea]);
+
+}
+
+/**
  * @OA\Post(
  *     path="/tareas",
  *     summary="Crear una nueva tarea",
