@@ -34,7 +34,22 @@ public function index()
     $tareas = Tarea::all();
     return Inertia::render('TareaIndex', ['tareas' => $tareas]);
 }
-
+/**
+ * @OA\Post(
+ *     path="/tareas/create",
+ *     summary="Crear una nueva tarea",
+ *     tags={"Tareas"},
+ *     @OA\Response(
+ *         response=200,
+ *         description="Renderiza la vista de creación de tarea",
+ *         @OA\JsonContent()
+ *     )
+ * )
+ */
+public function create()
+{
+    return Inertia::render('TareaCrear');
+}
 /**
  * @OA\Post(
  *     path="/tareas",
