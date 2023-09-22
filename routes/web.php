@@ -39,4 +39,3 @@ require __DIR__.'/auth.php';
 
 Route::resource('tareas', TareaController::class)->names('tareas');
 
-Route::apiResource('tareas', TareaController::class)->names('tareas');
